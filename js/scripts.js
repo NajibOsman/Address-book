@@ -21,7 +21,7 @@ $(".contact").last().click(function() {
     $(".first-name").text(newContact.firstName);
     $(".last-name").text(newContact.lastName);
   });
-  
+
 
 
 //Business logic
@@ -29,3 +29,8 @@ function Contact(first, last) {
   this.firstName = first;
   this.lastName = last;
 }
+
+
+Contact.prototype.fullName = function() {
+  return this.firstName + " " + this.lastName;
+};
